@@ -1,15 +1,17 @@
 import "./App.css";
 import Home from "./Home";
-import Entry from "./Entry";
 import BrowseMoods from "./BrowseMoods";
 import Visualizer from "./Visualizer";
+import EntryComponent from "./EntryComponent";
+import Search from "./Search";
 // import Merchandise from "./Merchandise";
 
 function App() {
 	return (
 		<div className="App">
+			<Search />
 			<Home />
-			<Entry />
+			<EntryComponent />
 			<BrowseMoods />
 			{/* <Merchandise /> */}
 			<Visualizer />
