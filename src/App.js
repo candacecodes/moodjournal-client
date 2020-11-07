@@ -9,12 +9,12 @@ import Search from "./Search";
 function App() {
 	return (
 		<div className="App">
-			<Search />
-			<Home />
+			{/* <Search />
+			<Home /> */}
 			<EntryComponent />
-			<BrowseMoods />
+			{/* <BrowseMoods /> */}
 			{/* <Merchandise /> */}
-			<Visualizer />
+			{/* <Visualizer /> */}
 		</div>
 	);
 }

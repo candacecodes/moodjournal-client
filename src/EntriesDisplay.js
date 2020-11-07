@@ -1,7 +1,13 @@
 import React, { Component } from "react";
+import EntryCard from "./EntryCard";
 
 export default class EntriesDisplay extends Component {
 	render() {
-		return <div>Display Entries</div>;
+		return (
+			<div>
+				{/* Map through entries fetch  */}
+				{/* <EntryCard entry={entry}/> */}
+			</div>
+		);
 	}
 }

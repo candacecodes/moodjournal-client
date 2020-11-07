@@ -6,7 +6,6 @@ export default class EntryComponent extends Component {
 	render() {
 		return (
 			<div>
-				Entry Component
 				<EntryAdd />
 				<EntriesDisplay />
 			</div>
