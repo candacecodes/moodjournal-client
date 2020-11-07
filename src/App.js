@@ -11,7 +11,7 @@ function App() {
 		<div className="App">
 			{/* <Search />
 			<Home /> */}
-			{/* <EntryComponent /> */}
+			<EntryComponent />
 			{/* <BrowseMoods /> */}
 			{/* <Merchandise /> */}
 			{/* <Visualizer /> */}
