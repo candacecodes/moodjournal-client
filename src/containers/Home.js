@@ -1,12 +1,17 @@
 import React, { Component } from "react";
-import Quotes from "./Quotes";
-import Time from "./Time";
+
+
+import Sidebar from "./Sidebar"
+import Quotes from "../components/Quotes";
+import Time from "../components/Time";
+
+
 
 export default class Home extends Component {
 	render() {
 		return (
 			<div>
-				Home Component
+				<Sidebar />
 				<Quotes />
 				<Time />
 			</div>
