@@ -1,21 +1,34 @@
+import React from 'react';
 import "./App.css";
-import Home from "./Home";
-import BrowseMoods from "./BrowseMoods";
-import Visualizer from "./Visualizer";
-import EntryComponent from "./EntryComponent";
-import Search from "./Search";
-// import Merchandise from "./Merchandise";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-function App() {
+import Sidebar from "./containers/Sidebar"
+import EntryComponent from "./Entry/EntryComponent";
+import Home from "./containers/Home";
+import Search from "./components/Search";
+import BrowseMoods from "./containers/BrowseMoods";
+// import Merchandise from "./Merchandise";
+// import Visualizer from "./Visualizer";
+
+
+
+
+
+const App = (props) => {
 	return (
-		<div className="App">
-			{/* <Search />
-			<Home /> */}
-			<EntryComponent />
-			{/* <BrowseMoods /> */}
-			{/* <Merchandise /> */}
-			{/* <Visualizer /> */}
-		</div>
+		<Router>
+			<div className="App">
+				{/* <Home /> */}
+				<Sidebar />
+				{/* <EntryComponent /> */}
+				<Route exact path="/home" component={Home} />
+				<Route exact path="/mood-entries" component={EntryComponent} />
+				<Route exact path="/search" component={Search} />
+				<Route exact path="/browse-moods" component={BrowseMoods} />
+				{/* <Route exact path="/merchandise" component={Merchandise} /> */}
+				{/* <Route exact path="/visualizer" component={Visualizer} /> */}
+			</div>
+		</Router>
 	);
 }
 
