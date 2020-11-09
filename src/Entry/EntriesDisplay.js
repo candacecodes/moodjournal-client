@@ -17,8 +17,17 @@ export default class EntriesDisplay extends Component {
 	}
 
 	updateEntryState = (event) => {
-		if (!this.state.entries.includes(event)) {
-			this.setState({ entries: [...this.state.entries, event] });
+		let entry = {
+			user_id: 1,
+			date: event.target.date.value,
+			title: event.target.title.value,
+			context: event.target.context.value,
+			intensity_level: event.target.intensitylevel.value,
+			mood_id: event.target.mood.value,
+		};
+		console.log(entry);
+		if (!this.state.entries.includes(entry)) {
+			this.setState({ entries: [...this.state.entries, entry] });
 		}
 	};
 
