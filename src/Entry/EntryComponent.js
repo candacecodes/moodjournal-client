@@ -13,7 +13,7 @@ export default class EntryComponent extends Component {
 		return (
 			<div>
 				{/* <EntryAdd addEntry={this.props.addEntry} /> */}
-				{this.buildEntries}
+				<div className="row">{this.buildEntries()}</div>
 			</div>
 		);
 	}

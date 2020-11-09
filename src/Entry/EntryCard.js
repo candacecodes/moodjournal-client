@@ -4,14 +4,11 @@ const EntryCard = (entry) => {
 	console.log("EntryCard");
 	return (
 		<div className="ui column">
-			<div
-				className="ui card"
-				key={entry.id}
-				// onClick={() => props.handleClick(props.bot)}
-			>
+			<div className="ui card" key={entry.id}>
 				<div className="content">
 					<div className="meta text-wrap">
-						<small>{entry.context}</small>
+						<small>{entry.date}</small>
+						<small>{entry.title}</small>
 					</div>
 				</div>
 
