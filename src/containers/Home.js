@@ -7,7 +7,7 @@ import Time from "../components/Time";
 export default class Home extends Component {
 	render() {
 		var sectionStyle = {
-			backgroundPosition: "center",
+			// backgroundPosition: "center",
 			// backgroundSize: "cover",
 			// backgroundRepeat: "no-repeat",
 			width: "100%",

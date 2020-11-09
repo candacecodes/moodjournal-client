@@ -9,7 +9,6 @@ export default class EntryComponent extends Component {
 				<EntryCard
 					entry={entry}
 					// key={entry.id}
-					// addEntry{this.props.addEntry}
 					// deleteEntry={this.props.deleteEntry}
 				/>
 			);
@@ -19,8 +18,9 @@ export default class EntryComponent extends Component {
 	render() {
 		return (
 			<div>
-				<EntryAdd />
-				{this.buildEntries}
+				<EntryAdd addEntry={this.props.addEntry} />
+
+				{/* {this.buildEntries} */}
 			</div>
 		);
 	}

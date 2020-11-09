@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Sidebar from "./containers/Sidebar";
-import EntryComponent from "./Entry/EntryComponent";
+import EntriesDisplay from "./Entry/EntriesDisplay";
 import Home from "./containers/Home";
 import Search from "./components/Search";
 import BrowseMoods from "./containers/BrowseMoods";
@@ -18,7 +18,7 @@ const App = (props) => {
 				<Sidebar />
 				{/* <EntryComponent /> */}
 				<Route exact path="/home" component={Home} />
-				<Route exact path="/mood-entries" component={EntryComponent} />
+				<Route exact path="/mood-entries" component={EntriesDisplay} />
 				<Route exact path="/search" component={Search} />
 				<Route exact path="/browse-moods" component={BrowseMoods} />
 				{/* <Route exact path="/merchandise" component={Merchandise} /> */}
