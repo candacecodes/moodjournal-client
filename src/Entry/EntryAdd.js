@@ -4,7 +4,7 @@ import { Card, CardBody, CardTitle, Button } from "reactstrap";
 export default class EntryAdd extends Component {
 	submitForm = (event) => {
 		event.preventDefault();
-		console.log(event.target.date.value);
+		console.log(event.target.mood.value);
 		// let data = {
 		// 	date: event.target.date.value,
 		// 	title: event.target.title.value,
@@ -63,14 +63,21 @@ export default class EntryAdd extends Component {
 				  <br></br> */}
 
 						{/* <h4 className="col-form-label-lg">Mood</h4> */}
-						<h6 className="card-subtitle">What mood are you in?</h6>
-						<input
+						<h6 className="card-subtitle">What's your mood</h6>
+						{/* <input
 							className="form-control-lg"
 							type="text"
 							name="mood"
 							value={null}
 							onChange={null}
-						/>
+						/> */}
+
+						<select name="mood" id="mood">
+							<option value="1">Mood1</option>
+							<option value="2">Mood2</option>
+							<option value="3">Mood3</option>
+							<option value="4">Mood4</option>
+						</select>
 
 						<br></br>
 						<br></br>
