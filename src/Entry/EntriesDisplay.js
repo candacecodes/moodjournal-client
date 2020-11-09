@@ -78,23 +78,26 @@ export default class EntriesDisplay extends Component {
 		});
 	};
 
-	viewEntries = () => {
-		this.setState(!this.state.viewEntries);
-
-		this.state.viewEntries = true ? null : (
-			<EntryComponent
-				entries={this.state.entries}
-				addEntry={this.addEntry}
-				deleteEntryFromBackend={this.deleteEntryFromBackend}
-			/>
-		);
-	};
+	// viewEntries = () => {
+	// 	this.state.viewEntries ? null : (
+	// <EntryComponent
+	// 	entries={this.state.entries}
+	// 	addEntry={this.addEntry}
+	// 	deleteEntryFromBackend={this.deleteEntryFromBackend}
+	// />
+	// 	);
+	// };
 
 	render() {
 		return (
 			<div>
 				<EntryAdd addEntry={this.props.addEntry} />
-				<Button onClick={this.viewEntries}> View Entries </Button>
+				{/* <Button onClick={this.viewEntries}> View Entries </Button> */}
+				<EntryComponent
+					entries={this.state.entries}
+					addEntry={this.addEntry}
+					deleteEntryFromBackend={this.deleteEntryFromBackend}
+				/>
 			</div>
 		);
 	}
