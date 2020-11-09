@@ -46,6 +46,18 @@ export default class EntriesDisplay extends Component {
 		this.updateEntryState(event);
 	};
 
+	deleteEntryFromBackend = (entry) => {
+		console.log(entry.id);
+		// const data = { entry };
+		fetch(`http://localhost:6001/entries/${entry.id}`, {
+			method: "DELETE",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		});
+		this.removeEntryFromState(entry);
+	};
+
 	removeEntryFromState = (entry) => {
 		this.setState({
 			entries: this.state.entries.filter((e) => e !== entry),
