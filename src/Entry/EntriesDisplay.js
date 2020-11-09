@@ -46,6 +46,12 @@ export default class EntriesDisplay extends Component {
 		this.updateEntryState(event);
 	};
 
+	removeEntryFromState = (entry) => {
+		this.setState({
+			myBots: this.state.entries.filter((e) => e !== entry),
+		});
+	};
+
 	render() {
 		return (
 			<div>

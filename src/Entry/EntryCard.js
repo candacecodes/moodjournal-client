@@ -16,7 +16,7 @@ const EntryCard = (entry) => {
 						<div className="ui center aligned segment basic">
 							<button
 								className="ui mini red button"
-								onClick={() => props.deleteEntry}
+								onClick={() => props.deleteEntry(entry)}
 							>
 								x
 							</button>
