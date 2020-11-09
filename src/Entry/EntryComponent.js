@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import EntryAdd from "./EntryAdd";
 import EntriesDisplay from "./EntriesDisplay";
+import EntryCard from "./EntryCard";
 
 export default class EntryComponent extends Component {
 	buildEntries = () => {
