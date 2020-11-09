@@ -16,7 +16,7 @@ export default class Home extends Component {
 		};
 
 		return (
-			<div style={null}>
+			<div style={sectionStyle}>
 				<Sidebar />
 				<Quotes />
 				<Time />
