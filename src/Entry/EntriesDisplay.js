@@ -67,7 +67,11 @@ export default class EntriesDisplay extends Component {
 	render() {
 		return (
 			<div>
-				<EntryComponent entries={this.state.entries} addEntry={this.addEntry} />
+				<EntryComponent
+					entries={this.state.entries}
+					addEntry={this.addEntry}
+					deleteEntryFromBackend={this.deleteEntryFromBackend}
+				/>
 			</div>
 		);
 	}
