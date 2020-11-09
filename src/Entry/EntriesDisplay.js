@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import EntryComponent from "./EntryComponent";
+import EntryAdd from "./EntryAdd";
+import { Button } from "reactstrap";
 
 export default class EntriesDisplay extends Component {
 	state = {
 		entries: [],
+		viewEntries: false,
 	};
 
 	componentDidMount() {
@@ -75,14 +78,23 @@ export default class EntriesDisplay extends Component {
 		});
 	};
 
+	viewEntries = () => {
+		this.setState(!this.state.viewEntries);
+
+		this.state.viewEntries = true ? null : (
+			<EntryComponent
+				entries={this.state.entries}
+				addEntry={this.addEntry}
+				deleteEntryFromBackend={this.deleteEntryFromBackend}
+			/>
+		);
+	};
+
 	render() {
 		return (
 			<div>
-				<EntryComponent
-					entries={this.state.entries}
-					addEntry={this.addEntry}
-					deleteEntryFromBackend={this.deleteEntryFromBackend}
-				/>
+				<EntryAdd addEntry={this.props.addEntry} />
+				<Button onClick={this.viewEntries}> View Entries </Button>
 			</div>
 		);
 	}
