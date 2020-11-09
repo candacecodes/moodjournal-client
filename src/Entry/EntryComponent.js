@@ -10,8 +10,8 @@ export default class EntryComponent extends Component {
 				<EntryCard
 					entry={entry}
 					// key={entry.id}
-					// handleClick={this.props.addBotToMyBots}
-					// deleteBotForever={this.props.deleteBotForever}
+					// addEntry{this.props.addEntry}
+					// deleteEntry={this.props.deleteEntry}
 				/>
 			);
 		});
@@ -20,8 +20,7 @@ export default class EntryComponent extends Component {
 	render() {
 		return (
 			<div>
-				<EntryAdd />
-				<EntriesDisplay entries={this.props.entries} />
+				{this.buildEntries}
 			</div>
 		);
 	}

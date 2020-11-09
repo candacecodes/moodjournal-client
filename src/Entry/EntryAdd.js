@@ -35,7 +35,7 @@ export default class EntryAdd extends Component {
 				{/* Attributes: date, title, context, mood (drop down), intensity level (1-5) */}
 
 				<CardBody className="card-body">
-					<form onSubmit={(event) => this.submitForm(event)}>
+					<form onSubmit={(event) => this.addEntry(event)}>
 						{/* <h4 className="col-form-label-lg">Date</h4> */}
 						<h6 className="card-subtitle">Date</h6>
 						<input type="date" name="date" value={null} onChange={null} />
