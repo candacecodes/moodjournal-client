@@ -24,9 +24,9 @@ export default class EntriesDisplay extends Component {
 
 	addEntry = (event) => {
 		event.preventDefault();
-		console.log(event.target.mood.value);
-		console.log(event.target.date.value);
-		console.log(event.target.title.value);
+		// console.log(event.target.mood.value);
+		// console.log(event.target.date.value);
+		// console.log(event.target.title.value);
 
 		let data = {
 			user_id: 1,
