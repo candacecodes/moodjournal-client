@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import EntryAdd from "./EntryAdd";
+import EntryAdd from "./EntryAdd";
 import EntryCard from "./EntryCard";
 
 export default class EntryComponent extends Component {
@@ -18,7 +18,7 @@ export default class EntryComponent extends Component {
 	render() {
 		return (
 			<div className="ui four column grid">
-				{/* <EntryAdd addEntry={this.props.addEntry} /> */}
+				<EntryAdd addEntry={this.props.addEntry} />
 				<div className="row">{this.buildEntries()}</div>
 			</div>
 		);
