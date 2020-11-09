@@ -48,7 +48,7 @@ export default class EntriesDisplay extends Component {
 
 	removeEntryFromState = (entry) => {
 		this.setState({
-			myBots: this.state.entries.filter((e) => e !== entry),
+			entries: this.state.entries.filter((e) => e !== entry),
 		});
 	};
 
