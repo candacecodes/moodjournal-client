@@ -47,14 +47,14 @@ export default class EntriesDisplay extends Component {
 	};
 
 	deleteEntryFromBackend = (entry) => {
-		console.log(entry.id);
+		console.log(entry);
 		// const data = { entry };
-		fetch(`http://localhost:6001/entries/${entry.id}`, {
-			method: "DELETE",
-			headers: {
-				"Content-Type": "application/json",
-			},
-		});
+		// fetch(`http://localhost:6001/entries/${entry.id}`, {
+		// 	method: "DELETE",
+		// 	headers: {
+		// 		"Content-Type": "application/json",
+		// 	},
+		// });
 		this.removeEntryFromState(entry);
 	};
 
