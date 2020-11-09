@@ -1,29 +1,28 @@
 import React, { Component } from "react";
-import { Card, CardBody, CardTitle, Button } from "reactstrap";
+import { Card, CardBody, CardTitle } from "reactstrap";
 
 export default class EntryAdd extends Component {
 	submitForm = (event) => {
 		event.preventDefault();
 		console.log(event.target.mood.value);
-		// let data = {
-		// 	date: event.target.date.value,
-		// 	title: event.target.title.value,
-		// 	context: event.target.context.value,
-		// 	intensity_level: event.target.intensitylevel.value,
-		// 	mood_id: event.target.mood.value,
-		// 	user_id: event.target.userid.value,
-		// };
+		let data = {
+			date: event.target.date.value,
+			title: event.target.title.value,
+			context: event.target.context.value,
+			intensity_level: event.target.intensitylevel.value,
+			mood_id: 1,
+			user_id: 1,
+		};
 
-		// fetch("http://localhost:3000/entries", {
-		// 	method: "POST",
-		// 	headers: {
-		// 		"Content-Type": "application/json",
-		// 	},
-		// 	body: JSON.stringify(data),
-		// }).then((response) => response.json());
-
-		// redirect(event);
+		fetch("http://localhost:3000/entries", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		}).then((response) => response.json());
 	};
+
 	render() {
 		return (
 			<Card className="card">
@@ -35,7 +34,7 @@ export default class EntryAdd extends Component {
 				{/* Attributes: date, title, context, mood (drop down), intensity level (1-5) */}
 
 				<CardBody className="card-body">
-					<form onSubmit={(event) => this.addEntry(event)}>
+					<form onSubmit={(event) => this.submitForm(event)}>
 						{/* <h4 className="col-form-label-lg">Date</h4> */}
 						<h6 className="card-subtitle">Date</h6>
 						<input type="date" name="date" value={null} onChange={null} />
@@ -87,7 +86,7 @@ export default class EntryAdd extends Component {
 						<input
 							className="form-control-lg"
 							type="text"
-							name="entry"
+							name="context"
 							value={null}
 							onChange={null}
 						/>
