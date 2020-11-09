@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import EntryAdd from "./EntryAdd";
+// import EntryAdd from "./EntryAdd";
 import EntryCard from "./EntryCard";
 
 export default class EntryComponent extends Component {
@@ -8,8 +8,8 @@ export default class EntryComponent extends Component {
 			return (
 				<EntryCard
 					entry={entry}
-					// key={entry.id}
-					// deleteEntry={this.props.deleteEntry}
+					key={entry.id}
+					deleteEntryFromBackend={this.props.deleteEntryFromBackend}
 				/>
 			);
 		});
@@ -18,9 +18,8 @@ export default class EntryComponent extends Component {
 	render() {
 		return (
 			<div>
-				<EntryAdd addEntry={this.props.addEntry} />
-
-				{/* {this.buildEntries} */}
+				{/* <EntryAdd addEntry={this.props.addEntry} /> */}
+				<div className="row">{this.buildEntries()}</div>
 			</div>
 		);
 	}
