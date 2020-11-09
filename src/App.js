@@ -6,7 +6,7 @@ import Sidebar from "./containers/Sidebar";
 import EntryComponent from "./Entry/EntryComponent";
 import Home from "./containers/Home";
 import Search from "./components/Search";
-import BrowseMoods from "./containers/BrowseMoods";
+import BrowseMoods from "./Moods/MoodComponent";
 // import Merchandise from "./Merchandise";
 // import Visualizer from "./Visualizer";
 
