@@ -24,7 +24,9 @@ export default class EntriesDisplay extends Component {
 
 	addEntry = (event) => {
 		event.preventDefault();
-		console.log(event.target.mood.value);
+		// console.log(event.target.mood.value);
+		// console.log(event.target.date.value);
+		// console.log(event.target.title.value);
 
 		let data = {
 			user_id: 1,
@@ -35,7 +37,7 @@ export default class EntriesDisplay extends Component {
 			mood_id: 1,
 		};
 
-		fetch("https://localhost:3000/entries", {
+		fetch("http://localhost:3000/entries", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -49,7 +51,7 @@ export default class EntriesDisplay extends Component {
 	deleteEntryFromBackend = (entry) => {
 		console.log(entry);
 		// const data = { entry };
-		fetch(`http://localhost:6001/entries/${entry.id}`, {
+		fetch(`http://localhost:3000/entries/${entry.id}`, {
 			method: "DELETE",
 			headers: {
 				"Content-Type": "application/json",

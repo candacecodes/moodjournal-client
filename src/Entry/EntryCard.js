@@ -9,6 +9,10 @@ const EntryCard = (props) => {
 						<small>{props.entry.date}</small>
 						<br />
 						<small>{props.entry.title}</small>
+						<br />
+						<small>{props.entry.context}</small>
+						<br />
+						<small>mood level: {props.entry.intensity_level}</small>
 					</div>
 				</div>
 
