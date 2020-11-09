@@ -1,13 +1,13 @@
 import React from "react";
 
 const EntryCard = (props) => {
-	console.log("EntryCard");
 	return (
-		<div className="ui column">
+		<div className="ui four column grid">
 			<div className="ui card" key={props.entry.id}>
 				<div className="content">
 					<div className="meta text-wrap">
 						<small>{props.entry.date}</small>
+						<br />
 						<small>{props.entry.title}</small>
 					</div>
 				</div>
