@@ -2,6 +2,28 @@ import React, { Component } from "react";
 import { Card, CardBody, CardTitle, Button } from "reactstrap";
 
 export default class EntryAdd extends Component {
+	submitForm = (event) => {
+		event.preventDefault();
+		console.log(event.target.mood.value);
+		// let data = {
+		// 	date: event.target.date.value,
+		// 	title: event.target.title.value,
+		// 	context: event.target.context.value,
+		// 	intensity_level: event.target.intensitylevel.value,
+		// 	mood_id: event.target.mood.value,
+		// 	user_id: event.target.userid.value,
+		// };
+
+		// fetch("http://localhost:3000/entries", {
+		// 	method: "POST",
+		// 	headers: {
+		// 		"Content-Type": "application/json",
+		// 	},
+		// 	body: JSON.stringify(data),
+		// }).then((response) => response.json());
+
+		// redirect(event);
+	};
 	render() {
 		return (
 			<Card className="card">
@@ -13,7 +35,7 @@ export default class EntryAdd extends Component {
 				{/* Attributes: date, title, context, mood (drop down), intensity level (1-5) */}
 
 				<CardBody className="card-body">
-					<form onSubmit={null}>
+					<form onSubmit={(event) => this.submitForm(event)}>
 						{/* <h4 className="col-form-label-lg">Date</h4> */}
 						<h6 className="card-subtitle">Date</h6>
 						<input type="date" name="date" value={null} onChange={null} />
@@ -41,14 +63,21 @@ export default class EntryAdd extends Component {
 				  <br></br> */}
 
 						{/* <h4 className="col-form-label-lg">Mood</h4> */}
-						<h6 className="card-subtitle">What mood are you in?</h6>
-						<input
+						<h6 className="card-subtitle">What's your mood</h6>
+						{/* <input
 							className="form-control-lg"
 							type="text"
 							name="mood"
 							value={null}
 							onChange={null}
-						/>
+						/> */}
+
+						<select name="mood" id="mood">
+							<option value="1">Mood1</option>
+							<option value="2">Mood2</option>
+							<option value="3">Mood3</option>
+							<option value="4">Mood4</option>
+						</select>
 
 						<br></br>
 						<br></br>
@@ -74,7 +103,7 @@ export default class EntryAdd extends Component {
 							type="number"
 							min="1"
 							max="5"
-							name="moodIntensity"
+							name="intensitylevel"
 							value={null}
 							onChange={null}
 						/>
@@ -83,11 +112,7 @@ export default class EntryAdd extends Component {
 						<br></br>
 						<br></br>
 
-						<input
-							className="btn btn btn-primary btn-lg"
-							type="submit"
-							value="Save Mood Entry"
-						/>
+						<input type="submit" value="Save Mood Entry" />
 					</form>
 				</CardBody>
 			</Card>

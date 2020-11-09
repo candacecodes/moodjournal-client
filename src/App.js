@@ -1,18 +1,14 @@
-import React from 'react';
+import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Sidebar from "./containers/Sidebar"
+import Sidebar from "./containers/Sidebar";
 import EntryComponent from "./Entry/EntryComponent";
 import Home from "./containers/Home";
 import Search from "./components/Search";
 import BrowseMoods from "./containers/BrowseMoods";
 // import Merchandise from "./Merchandise";
 // import Visualizer from "./Visualizer";
-
-
-
-
 
 const App = (props) => {
 	return (
@@ -30,6 +26,6 @@ const App = (props) => {
 			</div>
 		</Router>
 	);
-}
+};
 
 export default App;
