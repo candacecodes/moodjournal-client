@@ -1,8 +1,7 @@
 import React from "react";
 import "./App.css";
-import './Sidebar.css'
+import "./Sidebar.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-
 
 import Sidebar from "./containers/Sidebar";
 import EntriesDisplay from "./Entry/EntriesDisplay";
@@ -13,17 +12,19 @@ import BrowseMoods from "./Mood/MoodComponent";
 // import Visualizer from "./Visualizer";
 
 const App = (props) => {
-
-	const url = "https://source.unsplash.com/3000x1000/?nature"
+	const url = "https://source.unsplash.com/3000x1000/?nature";
 
 	return (
 		<Router>
 			<div className="App" id="outer-container">
-				<Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
-				<img src={url} className="bg" alt="nature-background"/>
+				<Sidebar
+					pageWrapId={"page-wrap"}
+					outerContainerId={"outer-container"}
+				/>
+				<img src={url} className="bg" alt="nature-background" />
 				<main id="page-wrap">
 					<Route exact path="/home" component={Home} />
-					<Route exact path="/mood-entries" component={EntryComponent} />
+					<Route exact path="/mood-entries" component={EntriesDisplay} />
 					{/* <Route exact path="/search" component={Search} /> */}
 					<Route exact path="/browse-moods" component={BrowseMoods} />
 					{/* <Route exact path="/merchandise" component={Merchandise} /> */}
