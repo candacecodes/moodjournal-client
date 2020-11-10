@@ -2,23 +2,44 @@ import React, { Component } from "react";
 import { Card, CardBody, CardTitle } from "reactstrap";
 
 export default class EntryAdd extends Component {
-	state = { date: "", title: "", context: "", intensityLevel: "", mood: "" };
+	state = {
+		moods: [],
+		date: "",
+		title: "",
+		context: "",
+		intensityLevel: "",
+		mood: "",
+	};
 
-	handleChange = (e) => {};
+	componentDidMount() {
+		fetch("http://localhost:3000/moods")
+			.then((res) => res.json())
+			.then((json) => {
+				this.setState({
+					moods: json,
+				});
+			});
+	}
 
-	// handleSubmit = (event) => {
-	// 	// event.preventDefault();
-	// 	// console.log(event.target.date.value);
-	// 	let data = {
-	// 		user_id: 1,
-	// 		date: event.target.date.value,
-	// 		title: event.target.title.value,
-	// 		context: event.target.context.value,
-	// 		intensity_level: event.target.intensitylevel.value,
-	// 		mood_id: 1,
-	// 	};
-	// 	this.props.addEntry(data);
-	// };
+	handleChange = (e) => {
+		let { name, value } = e.target;
+		this.setState({ [name]: value });
+	};
+
+	handleSubmit = (event) => {
+		event.preventDefault();
+		// console.log(event.target.date.value);
+		let data = {
+			user_id: 1,
+			date: event.target.date.value,
+			title: event.target.title.value,
+			context: event.target.context.value,
+			intensity_level: event.target.intensity_level.value,
+			mood: event.target.mood.value,
+		};
+		this.props.addEntry(data);
+	};
+
 	render() {
 		return (
 			<Card className="card">
@@ -49,7 +70,7 @@ export default class EntryAdd extends Component {
 							type="text"
 							name="title"
 							value={this.state.title}
-							// onChange={null}
+							onChange={this.handleChange}
 						/>
 
 						<br></br>
@@ -72,13 +93,34 @@ export default class EntryAdd extends Component {
 							onChange={null}
 						/> */}
 
-						<select name="mood" id="mood">
-							<option value="this.state.mood">Joy</option>
-							<option value="this.state.mood">Fear</option>
-							<option value="this.state.mood">Sadness</option>
-							<option value="this.state.mood">Disgust</option>
-							<option value="this.state.mood">Anger</option>
-							<option value="this.state.mood">Surprise</option>
+						<select
+							name="mood"
+							value={this.state.mood}
+							// id="mood"
+							onChange={this.handleChange}
+						>
+							<option>Joy</option>
+							<option>Fear</option>
+							<option>Sadness</option>
+							<option>Disgust</option>
+							<option>Anger</option>
+							<option>Surprise</option>
+							{/* <option
+								value={this.state.mood}
+								// id="mood"
+								name="joy"
+								onChange={this.handleChange}
+							>
+								Joy
+							</option>
+							<option
+								value={this.state.mood}
+								// id="mood"
+								name="fear"
+								onChange={this.handleChange}
+							>
+								Fear
+							</option> */}
 						</select>
 
 						<br></br>
@@ -91,7 +133,7 @@ export default class EntryAdd extends Component {
 							type="text"
 							name="context"
 							value={this.state.value}
-							// onChange={null}
+							onChange={this.handleChange}
 						/>
 
 						<br></br>
@@ -105,9 +147,9 @@ export default class EntryAdd extends Component {
 							type="number"
 							min="1"
 							max="5"
-							name="intensityLevel"
-							value={this.state.intensityLevel}
-							// onChange={null}
+							name="intensity_level"
+							value={this.state.intensity_level}
+							onChange={this.handleChange}
 						/>
 
 						<br></br>

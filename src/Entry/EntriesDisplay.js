@@ -109,7 +109,7 @@ export default class EntriesDisplay extends Component {
 	render() {
 		return (
 			<div>
-				<EntryAdd addEntry={this.props.addEntry} />
+				<EntryAdd addEntry={this.addEntry} />
 				{/* <Button onClick={this.viewEntries}> View Entries </Button> */}
 				<EntryComponent
 					entries={this.state.entries}
