@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import './Sidebar.css'
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// import PreloadImage from 'react-preload-image'
 
 
 import Sidebar from "./containers/Sidebar";
@@ -20,11 +19,6 @@ const App = (props) => {
 	return (
 		<Router>
 			<div className="App" id="outer-container">
-				{/* <PreloadImage 
-					className="backgroundImage"
-					src={url}
-					lazy
-				/> */}
 				<img src={url} className="bg" alt="nature-background"/>
 				<Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
 				<main id="page-wrap">
