@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Sidebar from "./containers/Sidebar";
 import EntriesDisplay from "./Entry/EntriesDisplay";
 import Home from "./containers/Home";
-import Search from "./components/Search";
-import BrowseMoods from "./Moods/MoodComponent";
+import Search from "./Mood/SearchMoods";
+import BrowseMoods from "./Mood/MoodComponent";
 // import Merchandise from "./Merchandise";
 // import Visualizer from "./Visualizer";
 
