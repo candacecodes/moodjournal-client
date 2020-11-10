@@ -2,27 +2,23 @@ import React, { Component } from "react";
 import { Card, CardBody, CardTitle } from "reactstrap";
 
 export default class EntryAdd extends Component {
-	// submitForm = (event) => {
-	// 	event.preventDefault();
-	// 	console.log(event.target.mood.value);
+	state = { date: "", title: "", context: "", intensityLevel: "", mood: "" };
+
+	handleChange = (e) => {};
+
+	// handleSubmit = (event) => {
+	// 	// event.preventDefault();
+	// 	// console.log(event.target.date.value);
 	// 	let data = {
+	// 		user_id: 1,
 	// 		date: event.target.date.value,
 	// 		title: event.target.title.value,
 	// 		context: event.target.context.value,
 	// 		intensity_level: event.target.intensitylevel.value,
 	// 		mood_id: 1,
-	// 		user_id: 1,
 	// 	};
-
-	// 	fetch("http://localhost:3000/entries", {
-	// 		method: "POST",
-	// 		headers: {
-	// 			"Content-Type": "application/json",
-	// 		},
-	// 		body: JSON.stringify(data),
-	// 	}).then((response) => response.json());
+	// 	this.props.addEntry(data);
 	// };
-
 	render() {
 		return (
 			<Card className="card">
@@ -34,10 +30,15 @@ export default class EntryAdd extends Component {
 				{/* Attributes: date, title, context, mood (drop down), intensity level (1-5) */}
 
 				<CardBody className="card-body">
-					<form onSubmit={(event) => this.props.addEntry(event)}>
+					<form onSubmit={(event) => this.handleSubmit(event)}>
 						{/* <h4 className="col-form-label-lg">Date</h4> */}
 						<h6 className="card-subtitle">Date</h6>
-						<input type="date" name="date" value={null} onChange={null} />
+						<input
+							type="date"
+							name="date"
+							value={this.state.date}
+							onChange={this.handleChange}
+						/>
 
 						<br></br>
 						<br></br>
@@ -47,8 +48,8 @@ export default class EntryAdd extends Component {
 							className="form-control-lg"
 							type="text"
 							name="title"
-							value={null}
-							onChange={null}
+							value={this.state.title}
+							// onChange={null}
 						/>
 
 						<br></br>
@@ -72,10 +73,12 @@ export default class EntryAdd extends Component {
 						/> */}
 
 						<select name="mood" id="mood">
-							<option value="1">Mood1</option>
-							<option value="2">Mood2</option>
-							<option value="3">Mood3</option>
-							<option value="4">Mood4</option>
+							<option value="this.state.mood">Joy</option>
+							<option value="this.state.mood">Fear</option>
+							<option value="this.state.mood">Sadness</option>
+							<option value="this.state.mood">Disgust</option>
+							<option value="this.state.mood">Anger</option>
+							<option value="this.state.mood">Surprise</option>
 						</select>
 
 						<br></br>
@@ -87,8 +90,8 @@ export default class EntryAdd extends Component {
 							className="form-control-lg"
 							type="text"
 							name="context"
-							value={null}
-							onChange={null}
+							value={this.state.value}
+							// onChange={null}
 						/>
 
 						<br></br>
@@ -102,9 +105,9 @@ export default class EntryAdd extends Component {
 							type="number"
 							min="1"
 							max="5"
-							name="intensitylevel"
-							value={null}
-							onChange={null}
+							name="intensityLevel"
+							value={this.state.intensityLevel}
+							// onChange={null}
 						/>
 
 						<br></br>
