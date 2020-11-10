@@ -22,7 +22,7 @@ const EntryCard = (props) => {
 							className="ui mini red button"
 							onClick={() => props.deleteEntryFromBackend(props.entry)}
 						>
-							x
+							Delete Entry
 						</button>
 					</div>
 				</span>

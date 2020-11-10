@@ -24,6 +24,7 @@ export default class EntryAdd extends Component {
 	handleChange = (e) => {
 		let { name, value } = e.target;
 		this.setState({ [name]: value });
+		console.log(this.state);
 	};
 
 	handleSubmit = (event) => {
