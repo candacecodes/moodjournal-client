@@ -1,8 +1,7 @@
 import React from "react";
 import "./App.css";
-import './Sidebar.css'
+import "./Sidebar.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-
 
 import Sidebar from "./containers/Sidebar";
 import EntriesDisplay from "./Entry/EntriesDisplay";
