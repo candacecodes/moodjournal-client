@@ -107,7 +107,8 @@ export default class EntriesDisplay extends Component {
 	render() {
 		return (
 			<div>
-				<EntryAdd addEntry={this.addEntry} />
+				<Button onClick={}> Add Entry </Button> <br />
+				{/* <EntryAdd addEntry={this.addEntry} /> */}
 				{/* <Button onClick={this.viewEntries}> View Entries </Button> */}
 				<EntryComponent
 					entries={this.state.entries}
