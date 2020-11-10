@@ -2,7 +2,7 @@ import React from 'react'
 
 const MoodCard = ({mood}) => {
     return (
-        <div>
+        <div className="ui five column grid">
             <h3>{mood.title}</h3>
             <p>{mood.description}</p><br/>
             <p><strong>Facial Expressions:</strong>{mood.facial_expressions}</p>

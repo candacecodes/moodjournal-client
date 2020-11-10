@@ -28,9 +28,11 @@ export default class Time extends Component {
 		};
 
 		return (
-			<div style={styles}>
-				<h1>Hello, world</h1>
-				<h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+			<div>
+				{/* <h1>Hello, world!</h1> */}
+				<h2>It is 
+					<div className="time">{this.state.date.toLocaleTimeString()}</div>
+				</h2>
 			</div>
 		);
 	}

@@ -3,10 +3,12 @@ import MoodCard from './MoodCard'
 
 const MoodDisplay = ({moods}) => {
     return (
-        <div>
-            {moods.map(mood => (
-                <MoodCard key={mood.id} mood={mood}/>
-            ))}
+        <div className="mood-card">
+            <div className="row mood-row">
+                {moods.map(mood => (
+                    <MoodCard key={mood.id} mood={mood}/>
+                ))}
+            </div>
         </div>
     )
 }

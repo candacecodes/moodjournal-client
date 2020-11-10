@@ -1,36 +1,20 @@
 import React from 'react'
-import { Nav } from 'react-bootstrap'
-import { withRouter } from 'react-router';
-import '../pages/style/Sidebar.css' /* only temporary */
+// import { NavLink } from 'react-router-dom';
+import { slide as Menu } from 'react-burger-menu'
 
-const Side = (props) => {
-    return (
-        <>
-            <div className="col-md-12 d-none d-md-block bg-light sidebar">
-                <Nav.Item>
-                    <Nav.Link href="/home">Home</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="/mood-entries">Mood Entries</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="/search">Search Moods</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="/browse-moods">Browse Moods</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="/merchandise">Merchandise</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="/visualizer">Visualizer</Nav.Link>
-                </Nav.Item>
-            </div>
-        </>
+const Sidebar = () => {
+
+return (
+    
+            <Menu>
+                <a className="menu-item" href="/home">Home</a>
+                <a className="menu-item" href="/mood-entries">Mood Entries</a>
+                <a className="menu-item" href="/browse-moods">Browse Moods</a>
+                <a className="menu-item" href="/merchandise">Merchandise</a>
+                <a className="menu-item" href="/visualizer">Visualizer</a>
+            </Menu>
+        
     )
-
 }
-
-const Sidebar = withRouter(Side)
 
 export default Sidebar

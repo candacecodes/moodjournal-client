@@ -16,11 +16,12 @@ export default class MoodComponent extends Component {
 	
 	render() {
 		const {moods} = this.state
-
+		let url = "https://www.verywellmind.com/an-overview-of-the-types-of-emotions-4163976#:~:text=During%20the%201970s%2C%20psychologist%20Paul,fear%2C%20surprise%2C%20and%20anger."
 		return (
 			<div>
 				{/* <SearchMoods /> */}
 				<MoodDisplay moods={moods}/>
+				Source: <a href={url}>Very Well Mind</a> 
 			</div>
 		)
 	}
