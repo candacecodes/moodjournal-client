@@ -17,7 +17,6 @@ export default class Quotes extends Component {
 
 		axios.get(url)
 		.then(res => {
-			console.log(res.data)
 			let data = res.data
 			let quoteNum = Math.floor(Math.random() * data.length)
 			let randomQuote = data[quoteNum] 
