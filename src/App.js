@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import './Sidebar.css'
 import { BrowserRouter as Router, Route } from "react-router-dom";
+// import PreloadImage from 'react-preload-image'
 
 
 import Sidebar from "./containers/Sidebar";
@@ -14,13 +15,18 @@ import BrowseMoods from "./Mood/MoodComponent";
 
 const App = (props) => {
 
-	const url = "https://source.unsplash.com/3000x1000/?nature"
+	const url = "https://source.unsplash.com/featured/?nature"
 
 	return (
 		<Router>
 			<div className="App" id="outer-container">
+				{/* <PreloadImage 
+					className="backgroundImage"
+					src={url}
+					lazy
+				/> */}
+				<img src={url} className="bg" alt="nature-background"/>
 				<Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
-				<img rel="preload" src={url} className="bg" alt="nature-background"/>
 				<main id="page-wrap">
 					<Route exact path="/home" component={Home} />
 					<Route exact path="/mood-entries" component={EntriesDisplay} />
@@ -32,6 +38,7 @@ const App = (props) => {
 			</div>
 		</Router>
 	);
+	
 };
 
 export default App;
