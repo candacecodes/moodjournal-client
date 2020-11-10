@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import MoodDisplay from './MoodDisplay'
+// import SearchMoods from "./SearchMoods";
 
-export default class BrowseMoods extends Component {
+export default class MoodComponent extends Component {
 	
 	componentDidMount() {
 		fetch('http://localhost:3000/moods')
@@ -18,6 +19,7 @@ export default class BrowseMoods extends Component {
 
 		return (
 			<div>
+				{/* <SearchMoods /> */}
 				<MoodDisplay moods={moods}/>
 			</div>
 		)

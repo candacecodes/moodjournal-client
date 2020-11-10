@@ -14,7 +14,7 @@ const Side = (props) => {
                     <Nav.Link href="/mood-entries">Mood Entries</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="/search">Search Mood</Nav.Link>
+                    <Nav.Link href="/search">Search Moods</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                     <Nav.Link href="/browse-moods">Browse Moods</Nav.Link>
