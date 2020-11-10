@@ -11,15 +11,15 @@ export default class EntryAdd extends Component {
 		mood: "",
 	};
 
-	componentDidMount() {
-		fetch("http://localhost:3000/moods")
-			.then((res) => res.json())
-			.then((json) => {
-				this.setState({
-					moods: json,
-				});
-			});
-	}
+	// componentDidMount() {
+	// 	fetch("http://localhost:3000/moods")
+	// 		.then((res) => res.json())
+	// 		.then((json) => {
+	// 			this.setState({
+	// 				moods: json,
+	// 			});
+	// 		});
+	// }
 
 	handleChange = (e) => {
 		let { name, value } = e.target;
@@ -95,16 +95,16 @@ export default class EntryAdd extends Component {
 
 						<select
 							name="mood"
-							value={this.state.mood}
+							// value={this.state.mood}
 							// id="mood"
 							onChange={this.handleChange}
 						>
-							<option>Joy</option>
-							<option>Fear</option>
-							<option>Sadness</option>
-							<option>Disgust</option>
-							<option>Anger</option>
-							<option>Surprise</option>
+							<option value="1">Joy</option>
+							<option value="2">Fear</option>
+							<option value="3">Sadness</option>
+							<option value="4">Disgust</option>
+							<option value="5">Anger</option>
+							<option value="6">Surprise</option>
 							{/* <option
 								value={this.state.mood}
 								// id="mood"

@@ -36,8 +36,6 @@ export default class EntriesDisplay extends Component {
 	// add functions
 	addEntry = (data) => {
 		console.log(data);
-		// event.preventDefault();
-		// console.log(event);
 
 		// let data = {
 		// 	user_id: 1,
@@ -48,17 +46,17 @@ export default class EntriesDisplay extends Component {
 		// 	mood_id: 1,
 		// };
 
-		// fetch("http://localhost:3000/entries", {
-		// 	method: "POST",
-		// 	headers: {
-		// 		"Content-Type": "application/json",
-		// 	},
-		// 	body: JSON.stringify(data),
-		// }).then((response) => response.json());
+		fetch("http://localhost:3000/entries", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		}).then((response) => response.json());
 
-		// 	if (!this.state.entries.includes(data)) {
-		// 		this.setState({ entries: [...this.state.entries, data] });
-		// 	}
+		if (!this.state.entries.includes(data)) {
+			this.setState({ entries: [...this.state.entries, data] });
+		}
 
 		// this.updateEntryState(event);
 	};
