@@ -36,7 +36,7 @@ export default class EntryAdd extends Component {
 			title: event.target.title.value,
 			context: event.target.context.value,
 			intensity_level: event.target.intensity_level.value,
-			mood: event.target.mood.value,
+			mood_id: event.target.mood.value,
 		};
 		this.props.addEntry(data);
 		alert("mood entry saved");
