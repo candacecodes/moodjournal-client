@@ -18,10 +18,10 @@ const EntryCard = (props) => {
 
 				<span>
 					<div className="ui center aligned segment basic">
-						<button
-							className="ui mini red button"
-							onClick={() => props.deleteEntryFromBackend(props.entry)}
-						>
+						<button onClick={null}>Edit Entry</button>
+						<br />
+
+						<button onClick={() => props.deleteEntryFromBackend(props.entry)}>
 							Delete Entry
 						</button>
 					</div>
