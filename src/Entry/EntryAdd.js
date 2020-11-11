@@ -39,6 +39,7 @@ export default class EntryAdd extends Component {
 			mood: event.target.mood.value,
 		};
 		this.props.addEntry(data);
+		alert("mood entry saved");
 	};
 
 	render() {
@@ -160,6 +161,7 @@ export default class EntryAdd extends Component {
 						<input type="submit" value="Save Mood Entry" />
 					</form>
 				</CardBody>
+				<button onClick={this.props.closeAddEntry}>View All Entries</button>
 			</Card>
 		);
 	}
