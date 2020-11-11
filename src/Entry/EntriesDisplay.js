@@ -92,30 +92,33 @@ export default class EntriesDisplay extends Component {
 
 	render() {
 		return (
-			<div>
-				{this.state.addEntry ? (
-					<EntryAdd
-						addEntry={this.addEntry}
-						closeAddEntry={this.closeAddEntry}
-					/>
-				) : (
-					<>
-						<div>
-							<button onClick={this.openAddEntry}>Add Entry</button>
-						</div>
-						<EntryComponent
-							entries={this.state.entries}
-							openAddEntry={this.openAddEntry}
-							deleteEntryFromBackend={this.deleteEntryFromBackend}
-						/>{" "}
-					</>
-				)}
-				{/* <EntryComponent
+			<>
+				<h1>Mood Entries</h1>
+				<div>
+					{this.state.addEntry ? (
+						<EntryAdd
+							addEntry={this.addEntry}
+							closeAddEntry={this.closeAddEntry}
+						/>
+					) : (
+						<>
+							<div>
+								<button onClick={this.openAddEntry}>Add Entry</button>
+							</div>
+							<EntryComponent
+								entries={this.state.entries}
+								openAddEntry={this.openAddEntry}
+								deleteEntryFromBackend={this.deleteEntryFromBackend}
+							/>{" "}
+						</>
+					)}
+					{/* <EntryComponent
 					entries={this.state.entries}
 					addEntry={this.addEntry}
 					deleteEntryFromBackend={this.deleteEntryFromBackend}
 				/> */}
-			</div>
+				</div>
+			</>
 		);
 	}
 }

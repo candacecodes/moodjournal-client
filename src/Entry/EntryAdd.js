@@ -47,7 +47,7 @@ export default class EntryAdd extends Component {
 			<Card className="card">
 				<CardTitle className="bg-light border-bottom p-3 mb-0">
 					<i className="mdi mdi-comment-processing-outline mr-2"> </i>
-					<h2>Create a New Entry</h2>
+					<h2>New Entry</h2>
 				</CardTitle>
 
 				{/* Attributes: date, title, context, mood (drop down), intensity level (1-5) */}
