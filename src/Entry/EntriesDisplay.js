@@ -6,7 +6,7 @@ import { Button } from "reactstrap";
 export default class EntriesDisplay extends Component {
 	state = {
 		entries: [],
-		viewEntries: false,
+		addEntry: false,
 	};
 
 	componentDidMount() {
@@ -80,41 +80,41 @@ export default class EntriesDisplay extends Component {
 		});
 	};
 
-	// viewEntries = () => {
-	// 	this.state.viewEntries ? null : (
-	// <EntryComponent
-	// 	entries={this.state.entries}
-	// 	addEntry={this.addEntry}
-	// 	deleteEntryFromBackend={this.deleteEntryFromBackend}
-	// />
-	// 	);
-	// };
+	closeAddEntry = () => {
+		this.setState({ addEntry: false });
+	};
 
-	// {this.state.chosenHog ? (
-	// 	<HogsDetails
-	// 		chosenHog={this.state.chosenHog}
-	// 		closeHog={this.closeHog}
-	// 	/>
-	// ) : (
-	// 	<HogsMenu
-	// 		hogs={hogs}
-	// 		sortType={this.state.sortType}
-	// 		greaseFilter={this.state.greaseFilter}
-	// 		selectHog={this.selectHog}
-	// 	/>
-	// )}
+	openAddEntry = () => {
+		this.setState({ addEntry: true });
+	};
+
+	// displayAddEntry = () => {
 
 	render() {
 		return (
 			<div>
-				<Button onClick={}> Add Entry </Button> <br />
-				{/* <EntryAdd addEntry={this.addEntry} /> */}
-				{/* <Button onClick={this.viewEntries}> View Entries </Button> */}
-				<EntryComponent
+				{this.state.addEntry ? (
+					<EntryAdd
+						addEntry={this.addEntry}
+						closeAddEntry={this.closeAddEntry}
+					/>
+				) : (
+					<>
+						<div>
+							<button onClick={this.openAddEntry}>Add Entry</button>
+						</div>
+						<EntryComponent
+							entries={this.state.entries}
+							openAddEntry={this.openAddEntry}
+							deleteEntryFromBackend={this.deleteEntryFromBackend}
+						/>{" "}
+					</>
+				)}
+				{/* <EntryComponent
 					entries={this.state.entries}
 					addEntry={this.addEntry}
 					deleteEntryFromBackend={this.deleteEntryFromBackend}
-				/>
+				/> */}
 			</div>
 		);
 	}
