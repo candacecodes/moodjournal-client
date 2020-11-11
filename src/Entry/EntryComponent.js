@@ -9,6 +9,7 @@ export default class EntryComponent extends Component {
 					entry={entry}
 					key={entry.id}
 					deleteEntryFromBackend={this.props.deleteEntryFromBackend}
+					handleUpdate={this.props.handleUpdate}
 				/>
 			);
 		});

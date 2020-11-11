@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import EntryComponent from "./EntryComponent";
 import EntryAdd from "./EntryAdd";
-import { Button } from "reactstrap";
+// import { Button } from "reactstrap";
 
 export default class EntriesDisplay extends Component {
 	state = {
@@ -19,20 +19,21 @@ export default class EntriesDisplay extends Component {
 			});
 	}
 
-	updateEntryState = (event) => {
-		console.log(event);
-		let entry = {
-			user_id: 1,
-			date: event.target.date.value,
-			title: event.target.title.value,
-			context: event.target.context.value,
-			intensity_level: event.target.intensitylevel.value,
-			mood_id: event.target.mood.value,
-		};
-		if (!this.state.entries.includes(entry)) {
-			this.setState({ entries: [...this.state.entries, entry] });
-		}
-	};
+	// updateEntryState = (event) => {
+	// 	console.log(event);
+	// 	let entry = {
+	// 		user_id: 1,
+	// 		date: event.target.date.value,
+	// 		title: event.target.title.value,
+	// 		context: event.target.context.value,
+	// 		intensity_level: event.target.intensitylevel.value,
+	// 		mood_id: event.target.mood.value,
+	// 	};
+	// 	if (!this.state.entries.includes(entry)) {
+	// 		this.setState({ entries: [...this.state.entries, entry] });
+	// 	}
+	// };
+
 	// add functions
 	addEntry = (data) => {
 		console.log(data);
@@ -60,6 +61,28 @@ export default class EntriesDisplay extends Component {
 
 		// this.updateEntryState(event);
 	};
+
+	// update functions
+	handleUpdate = (entry) => {
+		fetch(`http://localhost:3000/entries/${entry.id}`, {
+			method: 'PUT',
+			body: JSON.stringify({entry: entry}),
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(res => res.json())
+		.then(entry => this.updateEntry(entry))
+	}
+
+	updateEntry = (entry) => {
+		let newEntry = this.state.entries.filter((e) => e.id !== entry.id)
+		newEntry.push(entry)
+		this.setState({
+			entries: newEntry
+		})
+	}
+
 
 	// delete functions
 	deleteEntryFromBackend = (entry) => {
@@ -109,6 +132,7 @@ export default class EntriesDisplay extends Component {
 								entries={this.state.entries}
 								openAddEntry={this.openAddEntry}
 								deleteEntryFromBackend={this.deleteEntryFromBackend}
+								handleUpdate={this.handleUpdate}
 							/>{" "}
 						</>
 					)}
