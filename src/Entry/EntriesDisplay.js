@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import EntryComponent from "./EntryComponent";
 import EntryAdd from "./EntryAdd";
-import { Button } from "reactstrap";
+// import { Button } from "reactstrap";
 
 export default class EntriesDisplay extends Component {
 	state = {
