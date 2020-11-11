@@ -39,6 +39,7 @@ export default class EntryAdd extends Component {
 			mood: event.target.mood.value,
 		};
 		this.props.addEntry(data);
+		alert("mood entry saved");
 	};
 
 	render() {
