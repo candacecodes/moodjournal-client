@@ -1,26 +1,104 @@
 import "./App.css";
 import "../node_modules/react-vis/dist/style.css";
-import { XYPlot, LineSeries } from "react-vis";
+import { Button } from "reactstrap";
+import {
+	XYPlot,
+	XAxis,
+	YAxis,
+	VerticalGridLines,
+	HorizontalGridLines,
+	MarkSeries,
+	MarkSeriesCanvas,
+	Hint,
+} from "react-vis";
 import React, { Component } from "react";
 
+function getRandomData() {
+	return new Array(100).fill(0).map((row) => ({
+		x: Math.random() * 10,
+		y: Math.random() * 20,
+		size: Math.random() * 10,
+		color: Math.random() * 10,
+		opacity: Math.random() * 0.5 + 0.5,
+	}));
+}
+const colorRanges = {
+	typeA: ["#59E4EC", "#0D676C"],
+	typeB: ["#EFC1E3", "#B52F93"],
+};
+
+const randomData = getRandomData();
+const nextType = {
+	typeA: "typeB",
+	typeB: "typeA",
+};
+
+const nextModeContent = {
+	canvas: "SWITCH TO SVG",
+	svg: "SWITCH TO CANVAS",
+};
+
+const drawModes = ["canvas", "svg"];
+
 export default class Visualizer extends Component {
+	state = {
+		drawMode: 0,
+		data: randomData,
+		colorType: "typeA",
+		value: false,
+	};
+
 	render() {
-		const data = [
-			{ x: 0, y: 8 },
-			{ x: 1, y: 5 },
-			{ x: 2, y: 4 },
-			{ x: 3, y: 9 },
-			{ x: 4, y: 1 },
-			{ x: 5, y: 7 },
-			{ x: 6, y: 6 },
-			{ x: 7, y: 3 },
-			{ x: 8, y: 2 },
-			{ x: 9, y: 0 },
-		];
+		const { drawMode, data, colorType } = this.state;
+		const markSeriesProps = {
+			animation: true,
+			className: "mark-series-example",
+			sizeRange: [5, 15],
+			seriesId: "my-example-scatterplot",
+			colorRange: colorRanges[colorType],
+			opacityType: "literal",
+			data,
+			onNearestXY: (value) => this.setState({ value }),
+		};
+
+		const mode = drawModes[drawMode];
 		return (
-			<div className="App">
-				<XYPlot height={300} width={300}>
-					<LineSeries data={data} />
+			<div className="canvas-wrapper">
+				<div className="canvas-example-controls">
+					<div>{`MODE: ${mode}`}</div>
+					{/* <Button
+						onClick={() => this.setState({ drawMode: (drawMode + 1) % 2 })}
+						buttonContent={nextModeContent[mode]}
+					>
+						Click{" "}
+					</Button> */}
+					<Button
+						onClick={() => this.setState({ data: getRandomData() })}
+						buttonContent={"UPDATE DATA"}
+					>
+						{" "}
+						Update Data{" "}
+					</Button>
+					<Button
+						onClick={() => this.setState({ colorType: nextType[colorType] })}
+						buttonContent={"UPDATE COLOR"}
+					>
+						{" "}
+						Change Color{" "}
+					</Button>
+				</div>
+				<XYPlot
+					onMouseLeave={() => this.setState({ value: false })}
+					width={600}
+					height={300}
+				>
+					<VerticalGridLines />
+					<HorizontalGridLines />
+					<XAxis />
+					<YAxis />
+					{mode === "canvas" && <MarkSeriesCanvas {...markSeriesProps} />}
+					{mode === "svg" && <MarkSeries {...markSeriesProps} />}
+					{this.state.value ? <Hint value={this.state.value} /> : null}
 				</XYPlot>
 			</div>
 		);
