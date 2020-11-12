@@ -8,11 +8,11 @@ class EntryCard extends React.Component {
 		editable: false
 	}
 
-	handleChange = e => {
-		const name = e.target.name
-		this.setState({[name]: e.target.value})
+// 	handleChange = e => {
+// 		const name = e.target.name
+// 		this.setState({[name]: e.target.value})
 
-	}
+// 	}
 
 	handleEdit = () => {
 		if(this.state.editable){
