@@ -65,8 +65,8 @@ export default class EntriesDisplay extends Component {
 	// update functions
 	handleUpdate = (entry) => {
 		fetch(`http://localhost:3000/entries/${entry.id}`, {
-			method: 'PUT',
-			body: JSON.stringify({entry: entry}),
+			method: 'PATCH',
+			body: JSON.stringify(entry),
 			headers: {
 				'Content-Type': 'application/json'
 			}
@@ -82,6 +82,10 @@ export default class EntriesDisplay extends Component {
 			entries: newEntry
 		})
 	}
+
+	// handleChange = e => {
+	// 	const = 
+	// }
 
 
 	// delete functions
