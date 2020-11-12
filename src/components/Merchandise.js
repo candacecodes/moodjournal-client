@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 
-export default class Merchandise extends Component {
+const Merchandise = () => { 
+	return (
 
-	// const merchandise = {
+		<div>
+			<img />
+		</div>
 		
-	// }
-	render() {
-		return <div>Merchandise Component</div>;
-	}
+	)
 }
+
+export default Merchandise
