@@ -19,21 +19,6 @@ export default class EntriesDisplay extends Component {
 			});
 	}
 
-	// updateEntryState = (event) => {
-	// 	console.log(event);
-	// 	let entry = {
-	// 		user_id: 1,
-	// 		date: event.target.date.value,
-	// 		title: event.target.title.value,
-	// 		context: event.target.context.value,
-	// 		intensity_level: event.target.intensitylevel.value,
-	// 		mood_id: event.target.mood.value,
-	// 	};
-	// 	if (!this.state.entries.includes(entry)) {
-	// 		this.setState({ entries: [...this.state.entries, entry] });
-	// 	}
-	// };
-
 	// add functions
 	addEntry = (data) => {
 		console.log(data);
@@ -58,15 +43,13 @@ export default class EntriesDisplay extends Component {
 		if (!this.state.entries.includes(data)) {
 			this.setState({ entries: [...this.state.entries, data] });
 		}
-
-		// this.updateEntryState(event);
 	};
 
 	// update functions
 	handleUpdate = (entry) => {
 		fetch(`http://localhost:3000/entries/${entry.id}`, {
-			method: 'PUT',
-			body: JSON.stringify({entry: entry}),
+			method: 'PATCH',
+			body: JSON.stringify(entry),
 			headers: {
 				'Content-Type': 'application/json'
 			}
@@ -82,6 +65,10 @@ export default class EntriesDisplay extends Component {
 			entries: newEntry
 		})
 	}
+
+	// handleChange = e => {
+	// 	const = 
+	// }
 
 
 	// delete functions

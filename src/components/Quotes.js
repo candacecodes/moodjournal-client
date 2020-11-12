@@ -35,11 +35,13 @@ export default class Quotes extends Component {
 	render() {
 		const { quote, author } = this.state
 		return (
-			<div id="wrapper">
-				<div id="quote-box">
-					<div id='text'><p>{quote}</p></div>
-					<div id='author'><h5>{author}</h5></div>
-				</div>
+			<div id="quote-box">
+				<blockquote>
+					{/* <div id="quote-box"> */}
+						<div id='text'><p>{quote}</p></div>
+						<cite><div id='author'><h5>{author}</h5></div></cite>
+					{/* </div> */}
+				</blockquote>
 			</div>
 		)
 	}
