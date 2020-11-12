@@ -2,12 +2,18 @@ import React from 'react'
 
 const MoodCard = ({mood}) => {
     return (
-        <div className="ui five column grid">
-            <h3>{mood.title}</h3>
-            <p>{mood.description}</p><br/>
-            <p><strong>Facial Expressions:</strong>{mood.facial_expressions}</p>
-            <p>Body Language: {mood.body_language}</p>
-            <p>Physical Reactions: {mood.physical_reactions}</p>
+        <div>
+            <div className="card ui grid">
+                <div className="card-body">
+                    <h3 className="card-title">{mood.title}</h3>
+                    <div className="card-text">
+                        <p>{mood.description}</p><br/>
+                        <p><strong>Facial Expressions:</strong>{mood.facial_expressions}</p>
+                        <p>Body Language: {mood.body_language}</p>
+                        <p>Physical Reactions: {mood.physical_reactions}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

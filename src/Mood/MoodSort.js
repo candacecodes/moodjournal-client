@@ -3,10 +3,15 @@ import React from 'react'
 const MoodSort = ({ selectSort }) => {
     return (
         <div>
-            <select onChange={ (e) => selectSort(e.target.value)}>
-                <option value="None">None</option>
-                <option value="Alphabetical">Alphabetical</option>
-            </select>
+            <strong>Sort By:</strong>
+            {/* <label>
+                <input type="radio" value="None" checked={null} onChange={e => selectSort(e.target.value)} />
+                None
+            </label> */}
+            <label>
+                <input type="radio" value="Alphabetically" checked={null} onChange={e => selectSort(e.target.value)} />
+                Alphabetically
+            </label>
         </div>
     )
 }

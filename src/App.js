@@ -8,7 +8,7 @@ import EntriesDisplay from "./Entry/EntriesDisplay";
 import Home from "./containers/Home";
 // import Search from "./Mood/SearchMoods";
 import MoodComponent from "./Mood/MoodComponent";
-// import Merchandise from "./Merchandise";
+import Merchandise from "./components/Merchandise";
 // import Visualizer from "./Visualizer";
 
 const App = (props) => {
@@ -25,7 +25,7 @@ const App = (props) => {
 					<Route exact path="/mood-entries" component={EntriesDisplay} />
 					{/* <Route exact path="/search" component={Search} /> */}
 					<Route exact path="/browse-moods" component={MoodComponent} />
-					{/* <Route exact path="/merchandise" component={Merchandise} /> */}
+					<Route exact path="/merchandise" component={Merchandise} />
 					{/* <Route exact path="/visualizer" component={Visualizer} /> */}
 				</main>
 			</div>

@@ -14,11 +14,16 @@ export default class MoodComponent extends Component {
 	state = {
 		moods: [],
 		sortType: 'None'
+		
 	}
 
-	selectSort = (sortType) => {
-		this.setState({sortType})
+	selectSort = e => {
+		console.log(e)
+		this.setState({sortType: e})
 	}
+
+	
+	
 	
 	render() {
 		const { moods, sortType } = this.state
@@ -27,7 +32,7 @@ export default class MoodComponent extends Component {
 			<div>
 				<h1>Mood Browser</h1>
 				<MoodSort selectSort={this.selectSort}/>
-				<MoodDisplay moods={moods} sortType={sortType}/>
+				<MoodDisplay sortType={sortType} moods={moods} />
 				Source: <a href={url}>Very Well Mind</a> 
 			</div>
 		)
