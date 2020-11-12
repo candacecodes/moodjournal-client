@@ -13,7 +13,7 @@ export default class MoodComponent extends Component {
 
 	state = {
 		moods: [],
-		sortType: 'none'
+		sortType: 'None'
 	}
 
 	selectSort = (sortType) => {
