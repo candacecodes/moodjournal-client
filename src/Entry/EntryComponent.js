@@ -17,8 +17,9 @@ export default class EntryComponent extends Component {
 
 	render() {
 		return (
-			<div className="ui four column grid">
-				<div className="row">{this.buildEntries()}</div>
+			// <div className="ui four column grid">
+			<div>
+				<div>{this.buildEntries()}</div>
 			</div>
 		);
 	}
