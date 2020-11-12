@@ -10,7 +10,7 @@
 	padding-top: 10px;
 }
 
-main {
+/* main {
 	height: 100%;
 	margin: auto;
 	width: 50%;
@@ -18,15 +18,15 @@ main {
 	padding: 10px;
 	text-align: center;
 	overflow: auto;
-}
-
-/* main {
-  height: 100%;
-  padding: 3em 2em;
-  text-align: center;
-  overflow: auto;
-  font-family: 'Indie Flower', cursive;
 } */
+
+main {
+	height: 100%;
+	padding: 3em 2em;
+	text-align: center;
+	overflow: auto;
+	font-family: "Indie Flower", cursive;
+}
 
 button {
 	font-family: "Indie Flower", cursive;
