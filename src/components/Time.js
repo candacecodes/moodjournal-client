@@ -18,19 +18,10 @@ export default class Time extends Component {
 	}
 
 	render() {
-		// const styles = {
-		// 	position: "fixed",
-		// 	left: "50%",
-		// 	top: "50%",
-		// 	"margin-top": "-50px",
-		// 	"margin-left": "-100px",
-		// 	"font-size": "30px",
-		// };
 
 		return (
 			<div>
-				{/* <h1>Hello, world!</h1> */}
-				<h2>It is 
+				<h2>
 					<div className="time">{this.state.date.toLocaleTimeString()}</div>
 				</h2>
 			</div>

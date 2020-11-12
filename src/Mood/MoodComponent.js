@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import MoodDisplay from './MoodDisplay'
+import MoodSort from "./MoodSort";
 
 
 export default class MoodComponent extends Component {
@@ -11,15 +12,22 @@ export default class MoodComponent extends Component {
 	}
 
 	state = {
-		moods: []
+		moods: [],
+		sortType: 'none'
+	}
+
+	selectSort = (sortType) => {
+		this.setState({sortType})
 	}
 	
 	render() {
-		const {moods} = this.state
+		const { moods, sortType } = this.state
 		let url = "https://www.verywellmind.com/an-overview-of-the-types-of-emotions-4163976#:~:text=During%20the%201970s%2C%20psychologist%20Paul,fear%2C%20surprise%2C%20and%20anger."
 		return (
 			<div>
-				<MoodDisplay moods={moods}/>
+				<h1>Mood Browser</h1>
+				<MoodSort selectSort={this.selectSort}/>
+				<MoodDisplay moods={moods} sortType={sortType}/>
 				Source: <a href={url}>Very Well Mind</a> 
 			</div>
 		)

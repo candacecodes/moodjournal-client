@@ -7,8 +7,8 @@ const Home = () => {
 
 		return (
 			<main>
-				<Quotes />
 				<Time />
+				<Quotes />
 			</main>
 		);
 	
