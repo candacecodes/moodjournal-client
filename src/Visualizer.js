@@ -65,7 +65,13 @@ export default class Visualizer extends Component {
 		return (
 			<div className="canvas-wrapper">
 				<div className="canvas-example-controls">
-					<div>{`MODE: Random Mood Data`}</div>
+					<div>
+						<br />
+						<br />
+						<br />
+						<br />
+						{`MODE: Random Mood Data`}
+					</div>
 					{/* <Button
 						onClick={() => this.setState({ drawMode: (drawMode + 1) % 2 })}
 						buttonContent={nextModeContent[mode]}
