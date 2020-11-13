@@ -32,13 +32,39 @@ class EntryCard extends React.Component {
 	render() {
 		const { entry, deleteEntryFromBackend } = this.props
 
-		let date = this.state.editable ? <input type='text' ref={input => this.date = input} onChange={this.handleChange} defaultValue={entry.date} /> : <small>{entry.date}</small>
-		let title = this.state.editable ? <input type='text' ref={input => this.title = input} onChange={this.handleChange} defaultValue={entry.title} /> : <small>{entry.title}</small>
-		let context = this.state.editable ? <input type='text' ref={input => this.context = input} onChange={this.handleChange} defaultValue={entry.context} /> : <small>{entry.context}</small>
-		let intensity_level = this.state.editable ? <input type='text' ref={input => this.intensity_level = input} onChange={this.handleChange} defaultValue={entry.intensity_level} /> : <small>{entry.intensity_level}</small>
+		let date = this.state.editable ? 
+		<div> 
+			Date:
+			<input type='date' ref={input => this.date = input} onChange={this.handleChange} defaultValue={entry.date} /> 
+		</div> 
+		:  
+		<h4>{entry.date}</h4>
+
+		let title = this.state.editable ? 
+		<div>
+			Title:
+			<input type='text' ref={input => this.title = input} onChange={this.handleChange} defaultValue={entry.title} /> 
+		</div>
+		: 
+		<h5>{entry.title}</h5>
+
+		let context = this.state.editable ? 
+		<div>
+			Describe how you feel.
+			<textarea ref={input => this.context = input} onChange={this.handleChange} defaultValue={entry.context} /> 
+		</div>
+		: 
+		<p>{entry.context}</p>
+
+		let intensity_level = this.state.editable ? 
+		<div>
+			<input type="number" ref={input => this.intensity_level = input} onChange={this.handleChange} defaultValue={entry.intensity_level} /> 
+		</div>
+		: 
+		<small>{entry.intensity_level}</small>
 
 		return (
-			<div className="ui four column grid">
+			<div className="entry card ui grid">
 				<div className="ui card" key={entry.id}>
 					<div className="content">
 						<div className="meta text-wrap">
@@ -54,9 +80,9 @@ class EntryCard extends React.Component {
 
 					<span>
 						<div className="ui center aligned segment basic">
-							<button onClick={() => this.handleEdit()}>{this.state.editable ? 'Submit': 'Edit'}</button>
+							<button className="entry-edit" onClick={() => this.handleEdit()}>{this.state.editable ? 'Submit': 'Edit'}</button>
 							<br />
-							<button onClick={() => deleteEntryFromBackend(entry)}>
+							<button className="entry-delete" onClick={() => deleteEntryFromBackend(entry)}>
 								Delete Entry
 							</button>
 						</div>

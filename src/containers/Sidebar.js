@@ -10,7 +10,7 @@ return (
                 <a className="menu-item" href="/">Home</a>
                 <a className="menu-item" href="/mood-entries">Mood Entries</a>
                 <a className="menu-item" href="/browse-moods">Browse Moods</a>
-                <a className="menu-item" href="/merchandise">Merchandise</a>
+                {/* <a className="menu-item" href="/merchandise">Merchandise</a> */}
                 <a className="menu-item" href="/visualizer">Visualizer</a>
             </Menu>
         

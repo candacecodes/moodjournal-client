@@ -103,7 +103,7 @@ export default class EntriesDisplay extends Component {
 	render() {
 		return (
 			<>
-				<h1>Mood Entries</h1>
+				<h1 className="title">Mood Entries</h1>
 				<div>
 					{this.state.addEntry ? (
 						<EntryAdd
@@ -113,7 +113,7 @@ export default class EntriesDisplay extends Component {
 					) : (
 						<>
 							<div>
-								<button onClick={this.openAddEntry}>Add Entry</button>
+								<button className="click-add-entry" onClick={this.openAddEntry}>Add Entry</button>
 							</div>
 							<EntryComponent
 								entries={this.state.entries}

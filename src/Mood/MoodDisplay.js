@@ -21,15 +21,11 @@ class MoodDisplay extends React.Component {
     render() {
         
         return (
-            <div className="mood-card">
-                <div className="row mood-row">
-                    {this.sortMoods().map(mood => {
-                        return (
-                        <div key={mood.name} >
-                            <MoodCard mood={mood}/>
-                        </div>
-                    )})}
-                </div>
+            <div className="mood-container">
+                {this.sortMoods().map(mood => {
+                    return (
+                        <MoodCard key={mood.name} mood={mood}/>
+                )})}
             </div>
         )
     }
