@@ -9,6 +9,16 @@
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
+.canvas-wrapper {
+	margin: 0;
+	position: absolute;
+	/* top: 50%; */
+	/* -ms-transform: translateY(-50%); */
+	/* transform: translateY(-50%); */
+	-ms-transform: translateX(+50%);
+	transform: translateX(+50%);
+	/* font-family: "Indie Flower", cursive; */
+}
 
 /* main {
 	height: 100%;
