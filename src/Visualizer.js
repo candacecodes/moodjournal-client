@@ -86,6 +86,9 @@ export default class Visualizer extends Component {
 						{" "}
 						Change Color{" "}
 					</Button>
+					<br />
+					<br />
+					<br />
 				</div>
 				<XYPlot
 					onMouseLeave={() => this.setState({ value: false })}
