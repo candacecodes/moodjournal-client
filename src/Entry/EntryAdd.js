@@ -158,7 +158,9 @@ export default class EntryAdd extends Component {
 						<br></br>
 						<br></br>
 
-						<input type="submit" value="Save Mood Entry" />
+						<button type="submit" value="Save Mood Entry">
+							Save Mood Entry
+						</button>
 					</form>
 				</CardBody>
 				<button onClick={this.props.closeAddEntry}>View All Entries</button>
