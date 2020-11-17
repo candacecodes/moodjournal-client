@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Special+Elite");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;800;900&display=swap");
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* div {
@@ -39,7 +38,7 @@ main > * {
 	padding: 3em 2em;
 	text-align: center;
 	overflow: auto;
-	font-family: 'Roboto Slab', serif;
+	font-family: "Roboto Slab", serif;
 }
 
 /* For background Image */
@@ -64,196 +63,221 @@ img.bg {
 
 /* Browse Moods */
 div.card.ui.grid {
-  width: 35%;
-  float: left;
-  padding: 1em;
-  outline: #3b0b0b dotted thick;
-  /* position: relative; */
-  line-height: 1.4;
-  display: block;
-  height: 530px;
-  margin-top: 30px;
-  margin-left: 200px;
-  margin-bottom:100px;
-  font-size: 20px;
-
+	width: 35%;
+	float: left;
+	padding: 1em;
+	outline: #3b0b0b dotted thick;
+	/* position: relative; */
+	line-height: 1.4;
+	display: block;
+	height: 530px;
+	margin-top: 30px;
+	margin-left: 200px;
+	margin-bottom: 100px;
+	font-size: 20px;
 }
 
 div.mood.card.ui.grid {
-  background-image: linear-gradient(to right,#FEBCC8, #FFFFD8, #EAEBFF, #E0FEFE,#D3EEFF);
+	background-image: linear-gradient(
+		to right,
+		#febcc8,
+		#ffffd8,
+		#eaebff,
+		#e0fefe,
+		#d3eeff
+	);
 }
 
 div.entry.card.ui.grid {
-  background-image: linear-gradient(to right,#FFFAB6, #FCECC0, #FADECB, #F7D0D5);
+	background-image: linear-gradient(
+		to right,
+		#fffab6,
+		#fcecc0,
+		#fadecb,
+		#f7d0d5
+	);
 }
 
-
-
 h3.card-title {
-  font-weight: 700;
-  font-size: 40px;
-  margin-top: 2px;
-  margin-bottom: 2px;
+	font-weight: 700;
+	font-size: 40px;
+	margin-top: 2px;
+	margin-bottom: 2px;
 }
 
 div.card-body {
-  position: sticky;
-  text-align: center;
+	position: sticky;
+	text-align: center;
 }
 
 /* Entry Display */
 
 h1.title {
-  font-family: "Special Elite", cursive;
-  font-size: 70px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-weight: 800;
+	font-family: "Special Elite", cursive;
+	font-size: 70px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: 800;
 }
 
 /* Add Entry Form */
 div.add-form {
-  border: dotted thick;
-  padding: 20px 5px;
-  width: 50%;
-  text-align: center;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  left: 28.75rem;
-  margin: 0; 
-  border-radius: 40px;
-  background-image: linear-gradient(to right, #EDCCE4, #E7D6E7,#E0E0EB, #DAE9EE, #D3F3F1);
+	border: dotted thick;
+	padding: 20px 5px;
+	width: 50%;
+	text-align: center;
+	display: block;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	left: 28.75rem;
+	margin: 0;
+	border-radius: 40px;
+	background-image: linear-gradient(
+		to right,
+		#edcce4,
+		#e7d6e7,
+		#e0e0eb,
+		#dae9ee,
+		#d3f3f1
+	);
 
-  /* border-radius: 5px;
+	/* border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px; */
 
-  text-align: center;
-  line-height: 30px;
-  height: 80%;
-  overflow: auto;
+	text-align: center;
+	line-height: 30px;
+	height: 80%;
+	overflow: auto;
 }
 
 hr {
-  width: 15%;
+	width: 15%;
 }
 
 h2.form-title {
-  font-weight: 800;
-  font-size: 40px;
-  margin-top: 5px;
+	font-weight: 800;
+	font-size: 40px;
+	margin-top: 5px;
 }
 
 h6.card-subtitle {
-  display: inline;
-  font-size: 25px;
-  margin: 30px;
+	display: inline;
+	font-size: 25px;
+	margin: 30px;
 }
 
 input {
-  margin: 15px;
+	margin: 15px;
 }
 
 input.entry-title {
-  width: 25%;
-  
+	width: 25%;
 }
 
-input[type=text] {
-  padding: 10px 0;
+input[type="text"] {
+	padding: 10px 0;
 }
 
-input.form-control-lg[type=number] {
-  padding: 10px 0;
-  display: inline;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 5%;
- 
+input.form-control-lg[type="number"] {
+	padding: 10px 0;
+	display: inline;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	width: 5%;
 }
 
-button[type=submit] {
-  width: 25%;
-  background-image: linear-gradient(to right, #B3CFDA, #C1E7B8,#EBE5BB, #F6BFC7, #EEA7CC, #C396CB);
-  color: black;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 400;
-  font-family: 'Roboto Slab', serif;
+button[type="submit"] {
+	width: 25%;
+	background-image: linear-gradient(
+		to right,
+		#b3cfda,
+		#c1e7b8,
+		#ebe5bb,
+		#f6bfc7,
+		#eea7cc,
+		#c396cb
+	);
+	color: black;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 400;
+	font-family: "Roboto Slab", serif;
 }
 
-button[type=submit]:hover {
-  background-image: linear-gradient(to right, #FF9AA2, #FFB7B2, #FFDAC1, #E2F0CB, #B5EAD7, #C7CEEA);
-  font-weight: bold;
-  font-family: 'Roboto Slab', serif;
+button[type="submit"]:hover {
+	background-image: linear-gradient(
+		to right,
+		#ff9aa2,
+		#ffb7b2,
+		#ffdac1,
+		#e2f0cb,
+		#b5ead7,
+		#c7ceea
+	);
+	font-weight: bold;
+	font-family: "Roboto Slab", serif;
 }
 
 button.entry-add,
 .click-add-entry,
 .entry-edit,
 .entry-delete {
-  font-family: 'Roboto Slab', serif;
-  width: 10%;
-  background-color: #696969;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 400;
+	font-family: "Roboto Slab", serif;
+	width: 10%;
+	background-color: #696969;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 400;
 }
 
 button.entry-add:hover,
 .click-add-entry:hover,
 button.entry-edit:hover,
 .entry-delete:hover {
-  background-color: #CFCFC5;
-  color: black;
-  font-weight: bold;
+	background-color: #cfcfc5;
+	color: black;
+	font-weight: bold;
 }
 
 /* Browse Entries */
 div.meta.text-wrap h4,
-div.meta.text-wrap h5, 
+div.meta.text-wrap h5,
 div.meta.text-wrap p,
 div.meta.text-wrap small {
-  margin: 0;
-  padding: 5px;
+	margin: 0;
+	padding: 5px;
 }
 
 div.meta.text-wrap h4 {
-  font-size: 30px;
+	font-size: 30px;
 }
 
 div.meta.text-wrap h5 {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 div.meta.text-wrap p {
-  font-size: 15px;
+	font-size: 15px;
 }
-
-
 
 button.entry-edit,
 .entry-delete {
-  width: 15%;
-  padding: 10px 20px;
-  
+	width: 15%;
+	padding: 10px 20px;
 }
-
-
-
 
 /* Time*/
 .time {
@@ -266,13 +290,13 @@ button.entry-edit,
 /* Random Quotes */
 
 #quote-box {
-	font-family: "Special Elite", cursive;
+	font-family: "Times New Roman";
 	color: #3f3f5a;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  justify-content: center;
-  overflow: hidden;
+	justify-content: center;
+	overflow: hidden;
 }
 
 blockquote {
@@ -288,7 +312,7 @@ blockquote {
 blockquote:before,
 blockquote:after {
 	position: absolute;
-	color:#707070;
+	color: #707070;
 	font-size: 8rem;
 	width: 4rem;
 	height: 4rem;
