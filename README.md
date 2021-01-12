@@ -36,6 +36,8 @@ We are living in a society with a lot of stress and distractions, sometimes we a
 
 ### Add Mood Entries
 
+(Apologize for the resolution)
+
 <img src="images/add-mood-entry.gif" width="700" alt="add mood entry"/>
 
 ### Mood Browsers
@@ -47,8 +49,8 @@ We are living in a society with a lot of stress and distractions, sometimes we a
 Technology Used:
 - Front End: ReactJS
     - [External API](https://type.fit/api/quotes) + Axios to fetch and generate random quotes in Home Page
-    - External API from [Unsplash] (https://source.unsplash.com/featured/?rock,tree,nature,water) to generate random background images
-- Backend + Database: [Ruby on Rails API] (https://github.com/candacecodes/moodjournal) 
+    - External API from [Unsplash](https://source.unsplash.com/featured/?rock,tree,nature,water) to generate random background images
+- Backend + Database: [Ruby on Rails API](https://github.com/candacecodes/moodjournal) 
 - CSS for styling 
 
 ---
