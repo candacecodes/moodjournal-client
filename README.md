@@ -5,7 +5,7 @@ Mood Journal
 
 This project is a mood journal to help log entries and moods for users.
 
-[Demo](https://moodjournal-client.herokuapp.com/)
+[Demo](https://moodjournal-client.herokuapp.com/){:target="_blank" rel="noopener"}
 
 ---
 
