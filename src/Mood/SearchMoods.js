@@ -12,7 +12,7 @@ export default class SearchMoods extends Component {
 	}
 
 	getMood = () => {
-		fetch(`${API_ROOT}/moods`, {
+		fetch(`https://mood-journal-api.herokuapp.com/moods`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
