@@ -6,7 +6,7 @@ import MoodSort from "./MoodSort";
 export default class MoodComponent extends Component {
 	
 	componentDidMount() {
-		fetch('http://localhost:3000/moods')
+		fetch('http://mood-journal-api.herokuapp.com/moods')
 		.then(res => res.json())
 		.then(moods => this.setState({moods}))
 	}
