@@ -1,3 +1,7 @@
+# Mood Journal
+This project is a mood journal to help log entries and moods for users.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
