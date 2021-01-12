@@ -6,7 +6,7 @@ import MoodSort from "./MoodSort";
 export default class MoodComponent extends Component {
 	
 	componentDidMount() {
-		fetch($`{API_ROOT}/moods`)
+		fetch(`${API_ROOT}/moods`)
 		.then(res => res.json())
 		.then(moods => this.setState({moods}))
 	}

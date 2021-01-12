@@ -12,7 +12,7 @@ export default class SearchMoods extends Component {
 	}
 
 	getMood = () => {
-		fetch($`{API_ROOT}/moods`, {
+		fetch(`${API_ROOT}/moods`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

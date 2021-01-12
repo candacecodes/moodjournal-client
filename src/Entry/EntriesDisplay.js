@@ -10,7 +10,7 @@ export default class EntriesDisplay extends Component {
 	};
 
 	componentDidMount() {
-		fetch($`{API_ROOT}/entries`)
+		fetch(`${API_ROOT}/entries`)
 			.then((res) => res.json())
 			.then((json) => {
 				this.setState({
@@ -32,7 +32,7 @@ export default class EntriesDisplay extends Component {
 		// 	mood_id: 1,
 		// };
 
-		fetch($`{API_ROOT}/entries`, {
+		fetch(`${API_ROOT}/entries`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -47,7 +47,7 @@ export default class EntriesDisplay extends Component {
 
 	// update functions
 	handleUpdate = (entry) => {
-		fetch($`{API_ROOT}/entries/${entry.id}`, {
+		fetch(`${API_ROOT}/entries/${entry.id}`, {
 			method: 'PATCH',
 			body: JSON.stringify(entry),
 			headers: {
@@ -75,7 +75,7 @@ export default class EntriesDisplay extends Component {
 	deleteEntryFromBackend = (entry) => {
 		console.log(entry);
 		// const data = { entry };
-		fetch($`{API_ROOT}/entries/${entry.id}`, {
+		fetch(`${API_ROOT}/entries/${entry.id}`, {
 			method: "DELETE",
 			headers: {
 				"Content-Type": "application/json",
