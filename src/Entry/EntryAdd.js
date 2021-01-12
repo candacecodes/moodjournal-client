@@ -12,7 +12,7 @@ export default class EntryAdd extends Component {
 	};
 
 	// componentDidMount() {
-	// 	fetch("http://mood-journal-api.herokuapp.com/moods")
+	// 	fetch($`{API_ROOT}/moods`)
 	// 		.then((res) => res.json())
 	// 		.then((json) => {
 	// 			this.setState({
